@@ -18,14 +18,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //initiates media player
-         mediaPlayer = MediaPlayer.create(this, R.raw.berimbau)
-       // mediaPlayer = AudioPlayer.createPlayer(this, R.raw.berimbau)
+       //  mediaPlayer = MediaPlayer.create(this, R.raw.berimbau)
+       // mediaPlayer =
+                AudioPlayer.create(this)
 
         val playButton = findViewById<View>(R.id.button_play) as Button
-        playButton.setOnClickListener { mediaPlayer!!.start() }
+        playButton.setOnClickListener {
+           // if (AudioPlayer.isAudioPlaying()!=true){
+             //   mediaPlayer!!.start()
+                AudioPlayer.start()
+           // }
+        }
 
         val pauseButton = findViewById<View>(R.id.button_pause) as Button
-        pauseButton.setOnClickListener { mediaPlayer!!.pause() }
+        pauseButton.setOnClickListener {
+           // mediaPlayer!!.pause()
+            AudioPlayer.pause()
+        }
 
         val restartButton = findViewById<View>(R.id.button_restart) as Button
         restartButton.setOnClickListener { mediaPlayer!!.seekTo(0) }

@@ -8,14 +8,34 @@ class AudioPlayer {
 
     companion object {
         var isPlaying:Boolean ?=null
+        var audioRes:Int = R.raw.berimbau
+        var mediaPlayer:MediaPlayer ?= null
 
-
-        fun createPlayer(context: Context, audioRes: Int): MediaPlayer {
-            val mediaPlayer = MediaPlayer.create(context, audioRes)
-            isPlaying = true
-            return mediaPlayer
+        fun isAudioPlaying():Boolean?{
+            return isPlaying
         }
 
+        fun create(context: Context): MediaPlayer {
+            mediaPlayer = MediaPlayer.create(context, audioRes)
+            isPlaying = true
+            return mediaPlayer!!
+        }
+
+        fun start() {
+            mediaPlayer?.start()
+        }
+
+
+
+        fun pause() {
+            mediaPlayer?.pause()
+        }
+
+
+        fun stop() {
+            mediaPlayer?.stop()
+            mediaPlayer?.release()
+        }
 
     }
 }
