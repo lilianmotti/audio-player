@@ -15,10 +15,10 @@ class AudioPlayer {
             return isPlaying
         }
 
-        fun create(context: Context): MediaPlayer {
+        fun create(context: Context) {
             mediaPlayer = MediaPlayer.create(context, audioRes)
             isPlaying = true
-            return mediaPlayer!!
+            //return mediaPlayer!!
         }
 
         fun start() {
