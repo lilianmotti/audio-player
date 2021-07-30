@@ -20,7 +20,7 @@
         android:id="@+id/button_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="@string/button_play"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -28,7 +28,7 @@
         android:id="@+id/button_pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pause"
+        android:text="@string/button_pause"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="84dp" />
 
@@ -36,7 +36,7 @@
         android:id="@+id/button_restart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Restart"
+        android:text="@string/button_stream"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="84dp" />
 
